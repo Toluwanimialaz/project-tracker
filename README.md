@@ -1,2 +1,2 @@
 # project-tracker
-A website ton manage your projects
+A website to manage your projects
