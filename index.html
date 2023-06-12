@@ -3,10 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
     <title>Document</title>
 </head>
 <body>
+    <div id="hero">
+        <h1>Project Tracker</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-header bg-dark" id="card">
+                      Instructions
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">Click on the button below and provide information about the following.</p>
+                      <ul class="list-group list-group-flush" id="olist">
+                        <li class="list-group item" id="list">Project Name</li>
+                        <li class="list-group item"  id="list">Project Type</li>
+                        <li class="list-group item"  id="list">Due Date</li>
+                        <li class="list-group item"  id="list">Hourly Rate</li>
+                      </ul>
+                      <a href="#" class="btn btn-primary"id="button" data-toggle="modal" data-target=".modal">Add project</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+              <div class="card">
+                <table id="tabili">
+                  <tr>
+                    <th>Project Name</th>
+                    <th>Project Type</th>
+                    <th>Due Date</th>
+                    <th>Hourly Wage</th>
+                    <th>Potential Earnings($)</th>
+                    <th></th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add a new project</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <label>Project Name</label><br>
+                <input class="stuff" type="text" id="inp1"><br>
+                <label  for="type">Project Type</label><br>
+                <select class="stuff" id="type">
+                  <option value="Web application(front end)">Web application(front end)</option>
+                  <option value="Web application(back end)">Web application(back end)</option>
+                  <option value="Web application(full stack)">Web application(full stack)</option>
+                  <option value="Mobile Appliation">Mobile Appliation</option>
+                  <option value="Print Campaign">Print Campaign</option>
+                  <option value="Digital Marketing Campaign">Digital Marketing Campaign</option>
+                </select><br>
+                <label >Due date</label><br>
+                <input class="stuff" id="dueDate" id="inp3"><br>
+                <label>Hourly Rate</label><br>
+                <input class="stuff" type="number" placeholder="$" id="inp4" ><br>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="submit">Submit project info</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
+
+
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+    ></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
